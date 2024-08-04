@@ -1,5 +1,9 @@
 # Tennis Probability Exploration
 
+### Run
+1. Open in Colab
+2. Run all cells!
+
 ### Introduction
 I was playing tennis with my mom and my sister on mothers day of summer 2024. My sister kept slamming the ball into the net so I had time to think. My sister is really not good at tennis.
 If my sister challenged me to a game of tennis, she wouldn't win. But if she wanted to try, would it be better for her to challenge me to a 1 set game or a 3 set game?
