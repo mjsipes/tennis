@@ -24,6 +24,20 @@ In a 1 set match she still only has a 36% chance of winning. In a three set matc
 I think these numbers are very interesting. I think probability is interesting. I spend a lot of my day dreaming thinking about the chances of this and that, and it makes me happy to see that as a computer science student, I have achieved the techincal ability to write a piece of code that solves some of these questions for me.
 
 
-The exploration:
-By using probability theory and recursive programming, I created a tennis probability model.
-The model has two sets of functions: probability functions and simulation functions.
+Here is a refined version of your text:
+
+---
+
+**The Exploration:**
+
+By utilizing probability theory and recursive programming, I developed a tennis probability model. This model performs two key functions:
+
+1. **Match Simulation:** The model simulates a tennis match by tracking the score and allocating points to either player A or player B. The probability of winning each point is determined by who is serving and the individual likelihood of player A or B winning the point.
+
+2. **Probability Calculation:** For every point in the match, the model calculates the probabilities of different outcomes. It assesses the current score to determine the probability of player A or B winning the match, the set, and the game.
+
+Example output:
+<img width="941" alt="image" src="https://github.com/user-attachments/assets/a343d283-d96d-4726-87d4-36f71d622274">
+
+
+
