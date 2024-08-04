@@ -36,8 +36,21 @@ By utilizing probability theory and recursive programming, I developed a tennis 
 
 2. **Probability Calculation:** For every point in the match, the model calculates the probabilities of different outcomes. It assesses the current score to determine the probability of player A or B winning the match, the set, and the game.
 
-Example output:
+The following is example output for a simulated 1 set match.
 <img width="941" alt="image" src="https://github.com/user-attachments/assets/a343d283-d96d-4726-87d4-36f71d622274">
 
+Each row represents the state of the game during one point. 
+The score is illustrated in the set, game and point columns where player a's points are on the left and player b's points are on the right. p_a_w_m = probability that a wins match. 
+p_b_w_m = probability that b wins match. 
+p_a_w_s = probability that a wins set. 
+p_b_w_s = probability that b wins set. 
+p_a_w_g = probability that a wins game. 
+p_b_w_g = probability that b wins game. 
+server represents which player is serving during that point. 
+message explains the outcome of the point. 
+d_p_a_w_m = the change in the probability that a wins the match.
+
+**Interesting Takeaways**
+In the provided example, both players are equally matched and have an equal chance of winning each individual point. 
 
 
