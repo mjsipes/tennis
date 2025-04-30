@@ -51,23 +51,23 @@ export function MatchDisplay({ match }: MatchDisplayProps) {
       </div>
 
       <div className="overflow-x-auto">
-        <Table>
-          <TableCaption>Match point-by-point history</TableCaption>
+        <Table className="text-2xs">
+          <TableCaption className="text-xs">Match point-by-point history</TableCaption>
           <TableHeader>
-            <TableRow>
-              <TableHead>Point</TableHead>
-              <TableHead>Sets (A-B)</TableHead>
-              <TableHead>Games (A-B)</TableHead>
-              <TableHead>Points (A-B)</TableHead>
-              <TableHead>P(A Win Match)</TableHead>
-              <TableHead>P(B Win Match)</TableHead>
-              <TableHead>P(A Win Set)</TableHead>
-              <TableHead>P(B Win Set)</TableHead>
-              <TableHead>P(A Win Game)</TableHead>
-              <TableHead>P(B Win Game)</TableHead>
+            <TableRow className="text-2xs">
+              <TableHead>Pt</TableHead>
+              <TableHead>Sets</TableHead>
+              <TableHead>Games</TableHead>
+              <TableHead>Points</TableHead>
+              <TableHead>P(A Match)</TableHead>
+              <TableHead>P(B Match)</TableHead>
+              <TableHead>P(A Set)</TableHead>
+              <TableHead>P(B Set)</TableHead>
+              <TableHead>P(A Game)</TableHead>
+              <TableHead>P(B Game)</TableHead>
               <TableHead>Server</TableHead>
-              <TableHead>Point Result</TableHead>
-              <TableHead>Δ P(A Win Match)</TableHead>
+              <TableHead>Result</TableHead>
+              <TableHead>Δ P(A)</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -81,7 +81,7 @@ export function MatchDisplay({ match }: MatchDisplayProps) {
               const dPAWinMatch = formatDeltaWithColor(entry.dPAWinMatch);
 
               return (
-                <TableRow key={entry.pointId}>
+                <TableRow key={entry.pointId} className="text-2xs">
                   <TableCell>{entry.pointId}</TableCell>
                   <TableCell>{`${entry.aSets}-${entry.bSets}`}</TableCell>
                   <TableCell>{`${entry.aGames}-${entry.bGames}`}</TableCell>
@@ -92,7 +92,7 @@ export function MatchDisplay({ match }: MatchDisplayProps) {
                   <TableCell className={pBWinSet.color}>{pBWinSet.text}</TableCell>
                   <TableCell className={pAWinGame.color}>{pAWinGame.text}</TableCell>
                   <TableCell className={pBWinGame.color}>{pBWinGame.text}</TableCell>
-                  <TableCell>{entry.server === 'a' ? 'Player A' : 'Player B'}</TableCell>
+                  <TableCell>{entry.server === 'a' ? 'A' : 'B'}</TableCell>
                   <TableCell>{entry.message}</TableCell>
                   <TableCell className={dPAWinMatch.color}>{dPAWinMatch.text}</TableCell>
                 </TableRow>
