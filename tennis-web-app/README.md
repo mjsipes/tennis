@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# Tennis Probability Model Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page application that allows users to interact with a tennis probability model. Users can input parameters like serve probabilities and the application will simulate a tennis match and display the results.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Input form for match parameters:
+  - Player A's probability of winning a point on serve
+  - Player A's probability of winning a point on return
+  - Starting server selection
+- Simulation of a complete tennis match
+- Detailed point-by-point log with win probabilities
+- Beautiful UI using shadcn components
 
-## Expanding the ESLint configuration
+## Technical Implementation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- TypeScript implementation of the tennis probability model
+- React components for user interaction
+- shadcn UI components for a clean, modern interface
+- Async processing to prevent UI freezing during simulation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## How to Use
+
+1. Set Player A's probability of winning a point on serve (between 0 and 1)
+2. Set Player A's probability of winning a point on return (between 0 and 1)
+3. Select which player serves first
+4. Click "Simulate Match" to run the simulation
+5. View the detailed results in the table below
+
+## Running the App
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Visit `http://localhost:5173` (or the URL shown in your terminal) to view the app.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- `src/lib/tennis-model.ts` - Core simulation logic
+- `src/components/tennis-form.tsx` - Input form
+- `src/components/match-display.tsx` - Results display
+- `src/components/ui/` - shadcn UI components
