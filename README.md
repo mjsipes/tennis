@@ -1,6 +1,6 @@
 # Tennis Probability Exploration
 
-Live App: https://tennis-sipes.vercel.app/
+**Live App: https://tennis-sipes.vercel.app/**
 
 ### Introduction
 I was playing tennis with my mom and my sister on mothers day of summer 2024. My sister kept slamming the ball into the net so I had time to think. My sister is really not good at tennis.
